@@ -1,5 +1,4 @@
-package in.ineuron.assignment;
-
+package in.ineuron.assignment3;
 /**
  * Q4. You are given a large integer represented as an integer array digits,
  * where each digits[i] is the ith digit of the integer. The digits are ordered
@@ -17,21 +16,21 @@ package in.ineuron.assignment;
  * @author Rajani N
  *
  */
-public class LargeIntegerByOne {
 
+public class LargeIntegerByOne {
 	private static int largeIntByOne(int nums[]) {
 		int sum = 0;
 		int lsb = 1;
 		int index = nums.length - 1;
-		
+
 		// traverse an array and calculate the sum
 		while (index >= 0) {
 			sum += lsb * nums[index];
 			index--;
 			lsb *= 10;
 		}
-		System.out.println("Large integer is: "+sum);
-		//increase sum by 1 and return
+		System.out.println("Large integer is: " + sum);
+		// increase sum by 1 and return
 		return sum + 1;
 	}
 
@@ -41,4 +40,5 @@ public class LargeIntegerByOne {
 		int sum = largeIntByOne(nums);
 		System.out.println("Large integer increased by 1:" + sum);
 	}
+
 }
